@@ -14,17 +14,24 @@ function App() {
   return (
     <div className="App">
       <h1>How fast do you type?</h1>
+      <div className="even-columns">
+        <p>
+          Word count: <strong>{wordCount}</strong>{" "}
+        </p>
+        <p>
+          Time remaining:<strong> {timeRemaining}</strong>
+        </p>
+      </div>
       <textarea
         ref={textareaRef}
         value={text}
         onChange={handleChange}
         disabled={!isGameRunning}
       />
-      <p>Time remaining: {timeRemaining}</p>
+
       <button onClick={startGame} disabled={isGameRunning}>
         Start
       </button>
-      <p>Word count: {wordCount} </p>
     </div>
   );
 }

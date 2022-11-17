@@ -1,3 +1,17 @@
+:root {
+  --font-size-small: 1rem;
+  --font-size-medium: 1.5rem;
+  --font-size-large: 2rem;
+}
+
+@media (min-width: 600px) {
+  :root {
+    --font-size-small: 1.5rem;
+    --font-size-medium: 2rem;
+    --font-size-large: 3.5rem;
+  }
+}
+
 *,
 *::backdrop,
 *::after {
@@ -17,27 +31,47 @@ body {
 .App {
   margin-inline: auto;
   max-width: 600px;
-  width: calc(100vh - 1em);
+  width: calc(100vw - 1em);
 }
 
 h1 {
   text-align: center;
+  font-size: var(--font-size-large);
 }
 
 textarea {
+  font-size: var(--font-size-small);
   height: 25vh;
-  width: 100%;
+  margin-top: 2em;
+  padding: 1em;
   resize: none;
+  width: 100%;
 }
 
 button {
+  background-color: #fafa;
+  cursor: pointer;
   display: block;
   font: inherit;
-  margin-inline: auto;
-  padding: 1em;
+  font-weight: bold;
   letter-spacing: 1px;
+  margin-inline: auto;
+  margin-top: 1em;
+  padding: 1em;
+  text-transform: uppercase;
+}
+
+button:not(:disabled):hover {
+  scale: 1.1;
 }
 
 p {
-  font-size: 1.1rem;
+  font-size: var(--font-size-medium);
+  text-align: center;
+  margin: 0;
+}
+
+.even-columns {
+  display: grid;
+  grid-auto-flow: column;
 }
