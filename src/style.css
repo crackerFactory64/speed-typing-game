@@ -1,0 +1,43 @@
+*,
+*::backdrop,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #bada55;
+  color: rgb(29, 28, 28);
+  display: grid;
+  font-family: Helvetica, sans-serif;
+  margin: 0;
+  min-height: 100vh;
+  place-content: center;
+}
+
+.App {
+  margin-inline: auto;
+  max-width: 600px;
+  width: calc(100vh - 1em);
+}
+
+h1 {
+  text-align: center;
+}
+
+textarea {
+  height: 25vh;
+  width: 100%;
+  resize: none;
+}
+
+button {
+  display: block;
+  font: inherit;
+  margin-inline: auto;
+  padding: 1em;
+  letter-spacing: 1px;
+}
+
+p {
+  font-size: 1.1rem;
+}
